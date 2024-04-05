@@ -163,10 +163,12 @@ export default {
       
       .image-container, .wrapper-container {
         width: 100%;
-        height: 5vh;
+        height: 100%;
         margin: 0;
-        background: #ee8e936c;
+        display: flex;
+        background-attachment: fixed;
       }
+
 
     }
 

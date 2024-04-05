@@ -22,10 +22,10 @@
         <label>Suffix</label>
         <select class="form-control" v-model="suffix" required>
           <option value="">Select Suffix</option>
-          <option value="mr">Mr.</option>
-          <option value="ms">Ms.</option>
-          <option value="mrs">Mrs.</option>
-          <option value="dr">Dr.</option>
+          <option value="Sr">Sr.</option>
+          <option value="Js">Jr.</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
         </select>
       </div>
   
