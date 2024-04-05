@@ -50,10 +50,11 @@ export default {
 </script>
 
 <style scoped>
-  .form-group{
-    margin: 30px 5px;
-  }
-  .ta-r{
-    text-align: right;
-  }
+.form-group {
+  margin: 30px 5px;
+}
+
+.ta-r {
+  text-align: right;
+}
 </style>

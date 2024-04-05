@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand navbar-light fixed-top">
     <div class="container">
-      <a href="#" class="navbar-brand" @click.prevent="navigateToHome">Home</a>
+      <a href="#" class="navbar-brand" @click.prevent="navigateToHome">Say Hi !</a>
       <div class="">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">

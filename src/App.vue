@@ -12,10 +12,10 @@
               <Login @navigate="handleNavigation" />
             </div>
             <div v-else-if="currentRoute === 'Signup'">
-              <Signup  @navigate="handleNavigation" />
+              <Signup @navigate="handleNavigation" />
             </div>
             <div v-else-if="currentRoute === 'Home'">
-              <Home />
+              <Home @navigate="handleNavigation" />
             </div>
           </div>
         </div>
@@ -55,128 +55,146 @@ export default {
 
 
 <style scoped>
-    @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
 
-    * {
-      box-sizing: border-box;
-    }
-
-
-    .main-container {
-      display: flex;
-      flex-direction: row;
-      background: #ee8e936c;
-    }
-    
-    .image-container {
-      width: 50%;
-    }
-    
-    .wrapper-container {
-      width: 50%;
-    }
+* {
+  box-sizing: border-box;
+}
 
 
-    body{
-      background: #ee8e936c;
-      min-height: 100vh;
-      display: flex;
-      font-weight: 400;
-      font-family: 'Fira Sans', sans-serif;
-    }
+.main-container {
+  display: flex;
+  flex-direction: row;
+  background: #ee8e936c;
+}
 
-    h1,h2,h3,h4,h5,h6,label,span{
-      font-weight: 500;
-      font-family: 'Fira Sans', sans-serif;
-    }
+.image-container {
+  width: 50%;
+}
 
-    body,html,#app,#root,.auth-wrapper{
-      width: 100%;
-      height: 100%;
-    }
-
-    #app{
-      text-align: center;
-    }
+.wrapper-container {
+  width: 50%;
+}
 
 
-    .navbar-light{
-      background-color: #ffffff;
-      box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-    }
+body {
+  background: #ee8e936c;
+  min-height: 100vh;
+  display: flex;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+}
 
-    .image{
-      border-radius: 10px;
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+span {
+  font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
+}
 
-    .auth-wrapper{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: left;
-      height: 100vh;
-      max-width: 80%;
-      margin: auto;
-    }
+body,
+html,
+#app,
+#root,
+.auth-wrapper {
+  width: 100%;
+  height: 100%;
+}
 
-    .auth-inner{
-      width: 800px;
-      margin: auto;
-      background: #ffffff;
-      box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-      padding: 40px 55px 45px 55px;
-      border-radius: 15px;
-      transition: all .3s;
-    }
+#app {
+  text-align: center;
+}
 
-    .auth-wrapper .form-control:focus{
-      border-color: #167bff;
-      box-shadow: none;
-    }
 
-    .auth-wrapper h3{
-      text-align: center;
-      margin: 0;
-      line-height: 1;
-      padding-bottom: 20px;
-      padding-top: 50px;
-    }
+.navbar-light {
+  background-color: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+}
 
-    .custom-control-label{
-      font-weight: 400;
-    }
+.image {
+  border-radius: 10px;
+}
 
-    .forgot-password,
-    .forgot-password a{
-      text-align: right;
-      font-size: 13px;
-      padding-top: 10px;
-      color: #7f7d7d;
-      margin: 0;
-    }
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  height: 100vh;
+  max-width: 80%;
+  margin: auto;
+}
 
-    @media screen and (max-width: 1368px){
-      .main-container {
-        flex-direction: column;
-      }
-      
-      .image-container, .wrapper-container {
-        width: 100%;
-        height: 5vh;
-        margin: 0;
-        background: #ee8e936c;
-      }
+.auth-inner {
+  width: 800px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all .3s;
+}
 
-    }
+.auth-wrapper .form-control:focus {
+  border-color: #167bff;
+  box-shadow: none;
+}
 
-    .image-container {
-      display: flex;
-      justify-content: center; /* Horizontally center the image */
-      align-items: center; /* Vertically center the image */
-      max-width: 80%; /* Make the image flexible within its container */
-      height: auto; /* Maintain the aspect ratio */
-      height: 100vh;
-      max-width: 100%;
-    }
+.auth-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+  padding-top: 50px;
+}
+
+.custom-control-label {
+  font-weight: 400;
+}
+
+.forgot-password,
+.forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #7f7d7d;
+  margin: 0;
+}
+
+@media screen and (max-width: 1368px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .image-container,
+  .wrapper-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    background-attachment: fixed;
+  }
+
+
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  /* Horizontally center the image */
+  align-items: center;
+  /* Vertically center the image */
+  max-width: 80%;
+  /* Make the image flexible within its container */
+  height: auto;
+  /* Maintain the aspect ratio */
+  height: 100vh;
+  max-width: 100%;
+}
 </style>
